@@ -40,11 +40,10 @@ function PackingList() {
 function Item({ item }) {
   return (
     <li>
-      <span>
+      <span style={item.packed ? { textDecoration: 'line-through' } : {}}>
         {item.quantity} {item.description}
       </span>
-      <button>&times;</button>
-      {/* TODO: in the above button, change the X to be the red X emoji later on */}
+      <button>❌</button>
     </li>
   );
 }
