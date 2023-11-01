@@ -38,7 +38,15 @@ function PackingList() {
 }
 
 function Item({ item }) {
-  return <li>{item.description}</li>;
+  return (
+    <li>
+      <span>
+        {item.quantity} {item.description}
+      </span>
+      <button>&times;</button>
+      {/* TODO: in the above button, change the X to be the red X emoji later on */}
+    </li>
+  );
 }
 
 function Stats() {
