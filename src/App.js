@@ -20,7 +20,15 @@ export default function App() {
   }
 
   function handleClearList() {
-    setItems([]);
+    let confirmed;
+
+    if (items.length) {
+      confirmed = window.confirm(
+        'Are you sure you want to delete every item from the list?'
+      );
+    }
+
+    if (confirmed) setItems([]);
   }
 
   return (
